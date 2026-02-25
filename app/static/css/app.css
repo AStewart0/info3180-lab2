@@ -1,3 +1,133 @@
 body {
-    padding-top: 5rem;
+    /* ===== Profile Page Styles ===== */
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  min-height: 80vh;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+/* --- Header / Banner --- */
+.profile-header {
+  background: linear-gradient(135deg, #3a7d44, #52b369);
+  color: #fff;
+  text-align: center;
+  padding: 36px 24px 28px;
+}
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  margin-bottom: 14px;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.profile-username {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin: 0 0 6px;
+}
+
+.profile-location {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0 0 4px;
+}
+
+.profile-joined {
+  font-size: 0.88rem;
+  opacity: 0.75;
+  margin: 0;
+  font-style: italic;
+}
+
+/* --- Bio --- */
+.profile-bio {
+  padding: 24px 28px 16px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-bio p {
+  margin: 0;
+}
+
+/* --- Stats --- */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 22px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Follow Button --- */
+.profile-action {
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px 28px;
+}
+
+.btn-follow {
+  background: linear-gradient(135deg, #3a7d44, #52b369);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
+}
+
+.btn-follow:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-follow:active {
+  transform: translateY(0);
+}
 }

@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
 
 ###
@@ -15,7 +16,7 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Antoine Stewart")
 
 
 ###
@@ -27,6 +28,17 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
+
+def format_date_joined(date):
+    """Formats a date object to 'Month, Year' string e.g. 'February, 2019'"""
+    return date.strftime("%B, %Y")
+
+
+@app.route('/profile')
+def profile():
+    date_joined = datetime.date(2022, 9, 5)
+    formatted_date = format_date_joined(date_joined)
+    return render_template('profile.html', date_joined=formatted_date)
 
 
 @app.after_request
